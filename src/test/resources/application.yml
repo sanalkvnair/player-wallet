@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:db;INIT=RUNSCRIPT FROM 'classpath:init.sql'
+    username: sa
+    password: sa
+  sql:
+    init:
+      continue-on-error: true
+      platform: h2
